@@ -1,0 +1,57 @@
+[
+    {
+        "id": "q-1",
+        "question": "What should be the primary consideration when selecting a journal for research publication?",
+        "options": [
+            "The journal's publication frequency",
+            "The journal's impact factor",
+            "The alignment of the journal's scope with your research",
+            "The location of the journal's editorial office"
+        ],
+        "answer": 2
+    },
+    {
+        "id": "q-2",
+        "question": "What does the \"impact factor\" of a journal indicate?",
+        "options": [
+            "The number of articles published in the journal",
+            "The journal's publishing frequency",
+            "The average number of times articles from the journal are cited in other publications",
+            "The number of subscribers to the journal"
+        ],
+        "answer": 2
+    },
+    {
+        "id": "q-3",
+        "question": "Which of the following is a reputable source for evaluating the quality of academic journals?",
+        "options": [
+            "Social media reviews",
+            "Journal's own website",
+            "Library databases and indexes",
+            "Personal opinion of colleagues"
+        ],
+        "answer": 2
+    },
+    {
+        "id": "q-4",
+        "question": "When assessing the reputation of a journal, what should you consider about the editorial board?",
+        "options": [
+            " The board's geographic diversity",
+            "The board's academic credentials and expertise",
+            "The board's political affiliations",
+            "The board's communication skills"
+        ],
+        "answer": 1
+    },
+    {
+        "id": "q-5",
+        "question": "What is the significance of the journal's acceptance rate in the publication selection process?",
+        "options": [
+            " A lower acceptance rate indicates higher quality",
+            "A higher acceptance rate indicates higher quality",
+            "Acceptance rate has no bearing on the quality of a journal",
+            "Acceptance rate primarily depends on the publication fee"
+        ],
+        "answer": 0
+    }
+]

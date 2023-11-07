@@ -1,0 +1,34 @@
+{% extends "_base.html" %}
+
+{% block content %}
+<div class="mx-auto w-5/6 md:w-4/6 mt-14 overflow-hidden bg-white rounded-lg shadow-lg">
+    <div class="w-5/6 mx-auto mb-8">
+        <div class="font-bold text-4xl  my-5 text-center">Workshop Feedback Form</div>
+        <div class="font-medium text-xl  my-5 ">Workshop On Research Aspects of AI&ML </div>
+        <p class="font-medium">Date : 4 Nov 2023</p>
+        <p class="font-medium">Thank you for taking the time to provide your feedback.</p>
+
+        {% if real_user %}
+       <p class="font-extralight my-3">Your certificate is ready for download. Simply click the button below to get it.</p>
+       <form action="/download-certificate/" method="post">
+        {% csrf_token %}
+        <button
+                        class="shadow mb-3 bg-gray-500 hover:bg-gray-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+                        type="submit">
+                        download Certificate
+                    </button>
+       </form>
+        {% else %}
+        <p class="font-extralight my-3">Your certificate is currently undergoing verification. To inquire about the issuance of your certificate, please contact the administrator.</p>
+        {% endif %}
+        <button
+        class="shadow mb-3 bg-gray-500 hover:bg-gray-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+       >
+        View Score  
+    </button>
+        <!-- {{user_answer}}
+      
+        {{data}} -->
+    </div>
+</div>
+{% endblock content %}

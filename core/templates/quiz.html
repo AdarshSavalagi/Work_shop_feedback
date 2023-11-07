@@ -1,0 +1,43 @@
+{% extends "_base.html" %}
+
+{% block content %}
+<div class="mx-auto w-5/6 md:w-4/6 mt-14 overflow-hidden bg-white rounded-lg shadow-lg">
+    <div class="w-5/6 mx-auto mb-8">
+
+        <div class="font-bold text-4xl  my-5 text-center">Quiz on </div>
+        <div class="font-medium text-xl  my-5 ">Workshop On Research Aspects of AI&ML </div>
+        <p class="font-medium">Date : 4 Nov 2023</p>
+        <p>Thank you for taking the time to provide your feedback. Your input is valuable to us. Please use the
+            following rating scale to express your level of agreement questions below:</p>
+    </div>
+    <form action="" method="post">
+{% csrf_token %}
+        <div class="w-5/6 mx-auto mb-8">
+            <ul>
+                {% for i in data %}
+                <h3 class="mb-4 font-medium  md:text-2xl text-gray-900 ">{{forloop.counter}}. {{i.question|safe}}</h3>
+                <ul
+                    class=" mb-3 mx-auto text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg  dark:border-gray-600 dark:text-white">
+                    {% for options in i.options %}
+                    <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                        <div class="flex items-center pl-3">
+                            <input type="radio" value="{{forloop.counter0}}" name="{{i.id}}"
+                                id="{{i.id}}-{{forloop.counter}}"
+                                class="w-4 h-4 text-gray-600  border-gray-300 focus:ring-gray-700  dark:focus:ring-black dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:border-gray-500"
+                                required>
+                            <label for="{{i.id}}-{{forloop.counter}}"
+                                class="w-full py-3 ml-2 text-sm font-medium text-gray-900 ">
+                                {{options}}</label>
+                        </div>
+                    </li>
+                    {% endfor %}
+    
+                </ul>
+                {% endfor %}
+            </ul>
+            <button class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="submit">submit</button>
+        </div>
+
+    </form>
+</div>
+{% endblock content %}
